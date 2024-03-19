@@ -1,0 +1,85 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import model.QLSVModel;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JMenuItem;
+
+public class QLSVView extends JFrame {
+
+	private JPanel contentPane;
+	private QLSVModel qlsvModel;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					QLSVView frame = new QLSVView();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public QLSVView() {
+		this.qlsvModel = new QLSVModel(); 
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 817, 490);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBorderPainted(false);
+		menuBar.setBackground(new Color(128, 128, 128));
+		setJMenuBar(menuBar);
+		
+		JMenu menuBarFile = new JMenu("File");
+		menuBarFile.setForeground(new Color(255, 255, 255));
+		menuBarFile.setFont(new Font("Arial", Font.BOLD, 14));
+		menuBarFile.setBackground(new Color(128, 128, 128));
+		menuBar.add(menuBarFile);
+		
+		JMenuItem menuItemOpen = new JMenuItem("Open");
+		menuItemOpen.setFont(new Font("Arial", Font.BOLD, 14));
+		menuItemOpen.setBackground(new Color(128, 128, 128));
+		menuBarFile.add(menuItemOpen);
+		
+		JMenuItem menuItemNew = new JMenuItem("New");
+		menuItemNew.setFont(new Font("Arial", Font.BOLD, 14));
+		menuItemNew.setBackground(new Color(128, 128, 128));
+		menuBarFile.add(menuItemNew);
+		
+		JMenuItem menuItemExit = new JMenuItem("Exit");
+		menuItemExit.setFont(new Font("Arial", Font.BOLD, 14));
+		menuItemExit.setBackground(new Color(128, 128, 128));
+		menuBarFile.add(menuItemExit);
+		
+		JMenu menuBarAbout = new JMenu("About");
+		menuBarAbout.setForeground(new Color(255, 255, 255));
+		menuBarAbout.setBackground(new Color(128, 128, 128));
+		menuBarAbout.setFont(new Font("Arial", Font.BOLD, 14));
+		menuBar.add(menuBarAbout);
+		
+		JMenuItem menuItemAboutMe = new JMenuItem("About me");
+		menuItemAboutMe.setFont(new Font("Arial", Font.BOLD, 14));
+		menuBarAbout.add(menuItemAboutMe);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+	}
+}

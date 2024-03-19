@@ -1,0 +1,116 @@
+package bai2;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+
+public class giaodien1 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JLabel lblNewLabel_2;
+	private JTextField textField_1;
+	private JLabel lblNewLabel_3;
+	private JTextField textField_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					giaodien1 frame = new giaodien1();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public giaodien1() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 568, 588);
+		contentPane = new JPanel();
+		setLocationRelativeTo(null);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Giải phương trình bậc hai");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 20));
+		lblNewLabel.setBounds(10, 22, 534, 37);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("a=");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 20));
+		lblNewLabel_1.setBounds(124, 101, 32, 36);
+		contentPane.add(lblNewLabel_1);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Arial", Font.BOLD, 20));
+		textField.setBounds(166, 100, 246, 37);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		lblNewLabel_2 = new JLabel("b=");
+		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 20));
+		lblNewLabel_2.setBounds(124, 165, 32, 36);
+		contentPane.add(lblNewLabel_2);
+		
+		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Arial", Font.BOLD, 20));
+		textField_1.setColumns(10);
+		textField_1.setBounds(166, 164, 246, 37);
+		contentPane.add(textField_1);
+		
+		lblNewLabel_3 = new JLabel("c=");
+		lblNewLabel_3.setFont(new Font("Arial", Font.BOLD, 20));
+		lblNewLabel_3.setBounds(124, 235, 32, 36);
+		contentPane.add(lblNewLabel_3);
+		
+		textField_2 = new JTextField();
+		textField_2.setFont(new Font("Arial", Font.BOLD, 20));
+		textField_2.setColumns(10);
+		textField_2.setBounds(166, 234, 246, 37);
+		contentPane.add(textField_2);
+		
+		JButton btnNewButton = new JButton("Giải");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 16));
+		btnNewButton.setBounds(87, 307, 85, 37);
+		contentPane.add(btnNewButton);
+		
+		JButton btnXa = new JButton("Xóa");
+		btnXa.setFont(new Font("Arial", Font.BOLD, 16));
+		btnXa.setBounds(227, 307, 85, 37);
+		contentPane.add(btnXa);
+		
+		JButton btnNewButton_1_1 = new JButton("Thoát");
+		btnNewButton_1_1.setFont(new Font("Arial", Font.BOLD, 16));
+		btnNewButton_1_1.setBounds(377, 307, 85, 37);
+		contentPane.add(btnNewButton_1_1);
+		
+		JLabel lblNewLabel_4 = new JLabel("Kết quả");
+		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 16));
+		lblNewLabel_4.setBounds(53, 367, 78, 19);
+		contentPane.add(lblNewLabel_4);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(54, 405, 443, 109);
+		contentPane.add(textArea);
+	}
+}

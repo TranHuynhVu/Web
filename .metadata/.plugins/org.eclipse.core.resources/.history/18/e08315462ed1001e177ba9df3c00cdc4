@@ -1,0 +1,127 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import java.awt.SystemColor;
+import java.awt.Color;
+import java.awt.Component;
+
+public class ViewXemChiTiet extends JFrame {
+
+	private JPanel contentPane;
+	public JTextArea idTTND;
+	public JLabel idTheLoai;
+	public JLabel idDanhMuc;
+	public JLabel idNamXuatBan;
+	public Component idNhaXuatBan;
+	public JLabel idTenTacGia;
+	public JLabel idTensach;
+
+	public ViewXemChiTiet() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, -47, 478, 566);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 250, 205));
+		contentPane.setForeground(new Color(0, 0, 128));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setResizable(false);
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		idTensach = new JLabel("");
+		idTensach.setForeground(new Color(0, 0, 128));
+		idTensach.setHorizontalAlignment(SwingConstants.CENTER);
+		idTensach.setFont(new Font("Arial", Font.BOLD, 20));
+		idTensach.setBounds(10, 9, 444, 40);
+		contentPane.add(idTensach);
+		
+		JLabel lblNewLabel_1 = new JLabel("Nhà xuất bản:");
+		lblNewLabel_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 15));
+		lblNewLabel_1.setBounds(39, 128, 107, 13);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Năm xuất bản:");
+		lblNewLabel_2.setForeground(new Color(0, 0, 128));
+		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 15));
+		lblNewLabel_2.setBounds(39, 178, 107, 13);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("Danh mục:");
+		lblNewLabel_3.setForeground(new Color(0, 0, 128));
+		lblNewLabel_3.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 15));
+		lblNewLabel_3.setBounds(39, 228, 107, 13);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("Thẻ loại:");
+		lblNewLabel_4.setForeground(new Color(0, 0, 128));
+		lblNewLabel_4.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 15));
+		lblNewLabel_4.setBounds(39, 278, 107, 13);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("Tóm tắc nội dung:");
+		lblNewLabel_5.setForeground(new Color(0, 0, 128));
+		lblNewLabel_5.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 15));
+		lblNewLabel_5.setBounds(39, 327, 142, 18);
+		contentPane.add(lblNewLabel_5);
+		
+		idTenTacGia = new JLabel("");
+		idTenTacGia.setForeground(new Color(0, 0, 128));
+		idTenTacGia.setFont(new Font("Arial", Font.PLAIN, 15));
+		idTenTacGia.setBounds(191, 82, 234, 13);
+		contentPane.add(idTenTacGia);
+		
+		idNhaXuatBan = new JLabel("");
+		idNhaXuatBan.setForeground(new Color(0, 0, 128));
+		idNhaXuatBan.setFont(new Font("Arial", Font.PLAIN, 15));
+		idNhaXuatBan.setBounds(191, 128, 234, 13);
+		contentPane.add(idNhaXuatBan);
+		
+		idNamXuatBan = new JLabel("");
+		idNamXuatBan.setForeground(new Color(0, 0, 128));
+		idNamXuatBan.setFont(new Font("Arial", Font.PLAIN, 15));
+		idNamXuatBan.setBounds(191, 178, 234, 13);
+		contentPane.add(idNamXuatBan);
+		
+		idDanhMuc = new JLabel("");
+		idDanhMuc.setForeground(new Color(0, 0, 128));
+		idDanhMuc.setFont(new Font("Arial", Font.PLAIN, 15));
+		idDanhMuc.setBounds(191, 228, 234, 13);
+		contentPane.add(idDanhMuc);
+		
+		idTheLoai = new JLabel("");
+		idTheLoai.setForeground(new Color(0, 0, 128));
+		idTheLoai.setFont(new Font("Arial", Font.PLAIN, 15));
+		idTheLoai.setBounds(191, 278, 234, 13);
+		contentPane.add(idTheLoai);
+		
+		
+		JScrollPane tTNDScrollPane = new JScrollPane();
+		tTNDScrollPane.setLocation(0, -23);
+		contentPane.add(tTNDScrollPane);
+		
+		JLabel lblNewLabel_6 = new JLabel("Tên tác giả:");
+		lblNewLabel_6.setForeground(new Color(0, 0, 128));
+		lblNewLabel_6.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 15));
+		lblNewLabel_6.setBounds(39, 82, 107, 15);
+		contentPane.add(lblNewLabel_6);
+		
+		idTTND = new JTextArea();
+		idTTND.setFont(new Font("Arial", Font.PLAIN, 15));
+		idTTND.setForeground(new Color(0, 0, 128));
+		contentPane.add(idTTND);
+		idTTND.setBounds(191, 327, 234, 123);
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;icon_new.png&apos; to &apos;LTJNCTaiLop/src/LapTrinhSuKien&apos;&#x0D;&#x0A;- Original project: &apos;JS_Swing&apos;&#x0D;&#x0A;- Destination element: &apos;LTJNCTaiLop/src/LapTrinhSuKien&apos;&#x0D;&#x0A;- Original element: &apos;icon_new.png&apos;" description="Copy file" destination="=LTJNCTaiLop/src&lt;LapTrinhSuKien" element1="src/Icon/icon_new.png" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1705376985573" units="0" version="1.0"/>
+</session>
